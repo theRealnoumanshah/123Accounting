@@ -1,0 +1,36 @@
+﻿@model _123Accounting.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Order</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Customer.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Customer.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Product.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Product.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OrderDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OrderDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.OrderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
